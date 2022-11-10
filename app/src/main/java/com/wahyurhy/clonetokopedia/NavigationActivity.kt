@@ -1,5 +1,6 @@
 package com.wahyurhy.clonetokopedia
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -9,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.wahyurhy.clonetokopedia.databinding.ActivityNavigationBinding
+import com.wahyurhy.clonetokopedia.ui.login.LoginActivity
 import com.wahyurhy.clonetokopedia.utils.Prefs
 
 class NavigationActivity : AppCompatActivity() {
@@ -41,11 +43,15 @@ class NavigationActivity : AppCompatActivity() {
                 val s = Prefs(this)
                 if (s.getIsLogin()) {
                     Log.d("TAG", "Sudah Login")
+                    navController.navigate(it.itemId)
                 } else {
                     Log.d("TAG", "Belum Login")
+                    val intentLogin = Intent(this@NavigationActivity, LoginActivity::class.java)
+                    startActivity(intentLogin)
                 }
 
             } else {
+                navController.navigate(it.itemId)
                 Log.d("TAG", "onCreate: yang lain id${it.itemId}")
             }
 
