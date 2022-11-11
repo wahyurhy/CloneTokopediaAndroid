@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- custom colors-->
+    <color name="colorPrimary">#18AF68</color>
+    <color name="colorSecondary">#00AB24</color>
+    <color name="gray_dark">#7C7C7C</color>
+    <color name="red_pink">#DB1A49</color>
+    <color name="white_soft">#F0F3F8</color>
+    <color name="purple">#8934CF</color>
+    <color name="cashback_badge">#C8FFDF</color>
+    <color name="shipping_badge">#FCEEB1</color>
+    <color name="notification_badge">#D52D60</color>
+    <color name="finished_badge">#D3FFDB</color>
+    <color name="text_finished">#1D9826</color>
+    <color name="star">#F7B902</color>
 </resources>
