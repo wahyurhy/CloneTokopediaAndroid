@@ -26,6 +26,7 @@
             android:name=".MainActivity"
             android:exported="false">
         </activity>
+        <activity android:name="com.wahyurhy.marketplace.ui.login.LoginActivity" />
     </application>
 
 </manifest>
