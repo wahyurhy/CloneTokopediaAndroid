@@ -9,4 +9,11 @@
     <string name="logout">Logout</string>
     <string name="sudah_login">SUDAH LOGIN</string>
     <string name="belum_login">BELUM LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="lupa_kata_sandi">Lupa kata sandi?</string>
+    <string name="masuk">Masuk</string>
+    <string name="atau_masuk_dengan">Atau masuk dengan</string>
+    <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="daftar">Daftar</string>
 </resources>

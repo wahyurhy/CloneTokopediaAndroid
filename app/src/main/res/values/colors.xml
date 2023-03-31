@@ -10,7 +10,7 @@
 
     <color name="colorPrimary">@color/colorPrimary_500</color>
     <color name="colorPrimaryVariant">@color/colorPrimary_500</color>
-    <color name="colorOnPrimary">#FF3700B3</color>
+    <color name="colorOnPrimary">@color/white</color>
 
     <color name="colorPrimary_400">#49bc80</color>
     <color name="colorPrimary_500">#19b06a</color>
