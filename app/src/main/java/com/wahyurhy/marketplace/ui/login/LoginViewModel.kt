@@ -3,7 +3,9 @@ package com.wahyurhy.marketplace.ui.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import com.wahyurhy.marketplace.core.data.repository.AppRepository
+import com.wahyurhy.marketplace.core.data.source.remote.request.LoginRequest
 
 class LoginViewModel(val repo: AppRepository) : ViewModel() {
 
@@ -16,5 +18,7 @@ class LoginViewModel(val repo: AppRepository) : ViewModel() {
     fun ubahData() {
         _text.postValue("Ini aku jadi koki")
     }
+
+    fun login(data: LoginRequest) = repo.login(data).asLiveData()
 
 }

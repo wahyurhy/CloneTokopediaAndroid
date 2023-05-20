@@ -1,11 +1,9 @@
 package com.wahyurhy.marketplace.ui.login
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.wahyurhy.marketplace.R
+import com.wahyurhy.marketplace.core.data.source.remote.request.LoginRequest
 import com.wahyurhy.marketplace.databinding.ActivityLoginBinding
-import com.wahyurhy.marketplace.utils.Prefs
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginActivity : AppCompatActivity() {
@@ -29,30 +27,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnMasuk.setOnClickListener {
-            viewModel.ubahData()
-        }
-    }
 
-    fun testing() {
-        val s = Prefs(this)
-        if (s.getIsLogin()) {
-            binding.tvStatus.text = getString(R.string.sudah_login)
-            binding.btnLogin.visibility = View.GONE
-            binding.btnLogout.visibility = View.VISIBLE
-        } else {
-            binding.tvStatus.text = getString(R.string.belum_login)
-            binding.btnLogin.visibility = View.VISIBLE
-            binding.btnLogout.visibility = View.GONE
-        }
+            val body = LoginRequest(
+                binding.edtEmail.text.toString(),
+                binding.edtPassword.text.toString()
+            )
 
-        binding.btnLogin.setOnClickListener {
-            s.setIsLogin(true)
-            onBackPressedDispatcher.onBackPressed()
-        }
+            viewModel.login(body).observe(this) {
 
-        binding.btnLogout.setOnClickListener {
-            s.setIsLogin(false)
-            onBackPressedDispatcher.onBackPressed()
+            }
         }
     }
 }
